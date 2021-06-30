@@ -166,7 +166,7 @@ def removeNote(message, userId):#удаление заметки по номер
 def addTask(message, userId):
     users[userId].tasks.append(message.text)
     users[userId].doing = 'addTaskTime'
-    bot.send_message(message.from_user.id, 'Описание добавленно. Введите время события, о котором пишите. Время вводить в формате: год месяц число часы минуты через пробел. Введите -1, если хотите указать время на данный момент')
+    bot.send_message(message.from_user.id, 'Описание добавленно. Введите время события, о котором пишите. Время вводить в формате: год месяц число часы минуты через пробел. (2021 6 30 12 45 - пример) Введите -1, если хотите указать время на данный момент')
 
 def addTaskTime(message, userId):
     if(message.text == '-1'):
