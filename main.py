@@ -26,7 +26,7 @@ def getTime(userId):
     newDate = datetime.datetime(date.year,date.month,date.day,date.hour,date.minute)
     return (newDate)
 
-def timeUpdater(*args, **kwargs):#тут будет отправка уведомлений
+def timeUpdater(*args, **kwargs):#отправка уведомлений
     time_now = dt.datetime.now(pytz.utc)
     for i in range (0, len(users)):
         date_for_user = getTime(i)
