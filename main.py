@@ -44,7 +44,7 @@ def timeUpdater(*args, **kwargs):#тут будет отправка уведо�
     print(time_now)
 
 sched = BackgroundScheduler()
-sched.add_job(timeUpdater, 'interval', seconds=1)
+sched.add_job(timeUpdater, 'interval', seconds=50)
 sched.start()
 
 commands = ['/start','/time','/setTime','/help','/myNotes','/addNote','/displayNote','/removeNote','/displayTasks','/displayTask','/removeTask','/addTask']
