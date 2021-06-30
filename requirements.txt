@@ -1,2 +1,2 @@
-pytelegrambotapi
-apscheduler
+pytelegrambotapi == 3.8.1
+apscheduler == 3.7.0
