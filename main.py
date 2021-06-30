@@ -292,7 +292,7 @@ def removeTask(message, userId):
 
 @bot.message_handler()
 def get_text_messages(message):#обработчик сообщений.
-    #try:
+    try:
         userId = User.findUser(message.from_user.id, users)
         if message.text.lower() == '/start':
             registrathion(message, userId)
@@ -394,8 +394,9 @@ def get_text_messages(message):#обработчик сообщений.
 
         else:
             bot.send_message(message.from_user.id, 'Не понимаю, что это значит.')
-    #except:
-    #    bot.send_message(message.from_user.id, 'Я сломался...')
+    except:
+        bot.send_message(495461815, 'Я сломался...')
+        bot.send_message(message.from_user.id, 'Я сломался...')
 
 
 bot.polling(none_stop=True)
